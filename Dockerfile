@@ -24,9 +24,8 @@ WORKDIR /app/rdc
 RUN npm install -g npm@latest 
 
 RUN npm install --force
-RUN npm run build
 
 EXPOSE 3000
 
-CMD nohup npm run start --prefix /app/rdc & \
+CMD npm run dev & \
     tail -f /dev/null
